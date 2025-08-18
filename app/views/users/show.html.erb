@@ -1,0 +1,19 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @user %>
+
+<div>
+  <%= link_to "Edit this user", edit_user_path(@user) %> |
+  <%= link_to "Back to users", users_path %>
+
+  <%#「2.3.3の演習内容」 %>
+  <%# if @user.microposts.any? %>
+    <%# <p> %>
+      <%# <strong>First micropost:</strong> %>
+      <%# <%= @user.microposts.first.content %>
+    <%# </p> %>
+  <%# end %>
+  <%#「ここまで」 %>
+
+  <%= button_to "Destroy this user", @user, method: :delete %>
+</div>
